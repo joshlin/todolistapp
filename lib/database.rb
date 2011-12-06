@@ -1,5 +1,5 @@
 # Set up the database
-DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/todolist.db")  
+DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/todolist.db")  
   
 class Item
   include DataMapper::Resource  
