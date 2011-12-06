@@ -6,9 +6,9 @@
 
 * The app lets you to manage your tasks and keep tracking. Functions includes:
   * Creat your tasks
+  * Display your tasks
   * Edit/Update/Delete your tasks
-  * Quickly mark tasks completed/imcompleted
+  * Quickly mark tasks completed/incompleted
 
 ## Demo in Heroku
-See Demo(http://todolistapp.heroku.com/)
-
+[See Demo](http://todolistapp.heroku.com/)
