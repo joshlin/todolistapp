@@ -7,8 +7,6 @@ require_relative 'database'
 # @last_update 12-05-2011
 #
 
-class ToDoList < Sinatra::Application
-
 set :views, settings.root + '/../views'
 set :public_folder, settings.root + '/../public'
 
@@ -67,7 +65,4 @@ get '/:id/complete' do
   item.updated_at = Time.now  
   item.save  
   redirect '/'  
-end  
-
-
 end

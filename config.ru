@@ -1,5 +1,5 @@
 $LOAD_PATH << File.dirname(__FILE__)
 
-require 'lib/app'
+require 'lib/todolist'
 
-run ToDoList
+run Sinatra::Application
