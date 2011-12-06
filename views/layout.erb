@@ -1,0 +1,19 @@
+<!doctype html>  
+<html lang="en">  
+<head>  
+  <meta charset="utf8">  
+  <title><%= @title + ' | Small Sinatra App' %></title>  
+  <link href="/css/reset.css" rel="stylesheet">  
+  <link href="/css/style.css" rel="stylesheet">  
+</head>  
+<body>  
+  <header>
+  	<h1><a href="/">To-Do-List</a></h1>  
+  </header> 
+  <div id="container">
+    <%= yield %>
+  </div>  
+  
+</body>  
+</html>  
+

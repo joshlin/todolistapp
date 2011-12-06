@@ -1,0 +1,14 @@
+<% if @item %>  
+  <form action="/<%= @item.id %>" method="post" id="edit">  
+    <input type="hidden" name="_method" value="put">  
+    <textarea name="detail"><%= @item.detail %></textarea>
+	<p style="color:white;margin-top:20px">
+    	<input type="checkbox" name="complete" <%= "checked" if @item.complete %>>  
+		Completed?
+	</p>
+	<p><input type="submit"></p>
+  </form>  
+  <p><a href="/<%= @item.id %>/delete">Delete</a></p>  
+<% else %>  
+  <p>Task not found.</p>  
+<% end %> 

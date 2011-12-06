@@ -1,0 +1,24 @@
+<section id="add_item">  
+  <form action="/" method="post">  
+    <textarea name="detail" placeholder="Enter your task.."></textarea>  
+    <input type="submit" value="Add Task" id="submit">
+  </form>  
+</section>  
+  
+<% @items.each do |item| %>
+	<article <%= 'class="complete"' if item.complete %>>
+	  <p class="links">  			
+	  	<a href="/<%= item.id %>/complete"><%= item.complete == true ? '&#10003;' : '&#x25a2;' %></a>
+	  </p>	    
+	  <p>
+			<%= item.detail %>			
+	  </p>		 		
+	  <p class="time">
+	  	<span class="function_link">
+			<a href="/<%= item.id %>">Edit</a> | 	
+			<a href="/<%= item.id %>/delete">Delete</a>
+        </span>
+		Created at <%= item.created_at.strftime("%H:%M, %m-%d-%Y") %>
+      </p>
+	</article>
+<% end %>
