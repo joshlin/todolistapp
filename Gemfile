@@ -4,11 +4,13 @@ gem 'sinatra'
 gem 'heroku'
 gem 'haml'
 gem 'rake'
-gem 'datamapper'
+gem 'data_mapper'
 
-group :test do
+group :development, :test do
   gem 'guard'
   gem 'guard-rspec'
   gem 'rspec'
   gem 'rack-test'
+  gem 'sqlite3'
+  gem 'dm-sqlite-adapter'
 end
