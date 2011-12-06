@@ -4,7 +4,7 @@ gem 'sinatra'
 gem 'heroku'
 gem 'haml'
 gem 'rake'
-gem 'data_mapper'
+gem 'datamapper'
 
 group :development, :test do
   gem 'guard'
