@@ -1,25 +1,11 @@
 require 'sinatra'
 require 'data_mapper'
-#require_relative 'database'
+require_relative 'database'
 #
 # @title My own To-Do-List/Reminder App
 # @author josh Lin joshlin@uw.edu
 # @last_update 12-05-2011
 #
-
-# Set up the database
-DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.db")
-  
-class Item
-  include DataMapper::Resource  
-  property :id, Serial  
-  property :detail, Text, :required => true  
-  property :complete, Boolean, :required => true, :default => false  
-  property :created_at, DateTime  
-  property :updated_at, DateTime  
-end  
-  
-DataMapper.finalize.auto_upgrade!
 
 set :views, settings.root + '/../views'
 set :public_folder, settings.root + '/../public'
