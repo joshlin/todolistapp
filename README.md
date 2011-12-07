@@ -11,4 +11,10 @@
   * Quickly mark tasks completed/incompleted
 
 ## Demo in Heroku
-[See Demo](http://todolistapp.heroku.com/)
+[See Demo](http://todolistapp.heroku.com/) or
+
+*  Clone this repo
+*  Run bundle
+*  Run ruby lib/todolist.rb
+*  See the app in http://localhost:4567/
+  

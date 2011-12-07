@@ -10,4 +10,4 @@ class Item
   property :updated_at, DateTime  
 end  
   
-DataMapper.auto_upgrade!
+DataMapper.finalize.auto_upgrade!
