@@ -19,11 +19,15 @@ end
 
 # Create
 post '/' do
-  item = Item.new
-  item.detail = params[:detail]
-  item.created_at = Time.now
-  item.updated_at = Time.now
+  
+  now = Time.now
+  
+  item = Item.create :detail => params[:detail], 
+    :created_at => now, 
+    :updated_at => now
+    
   item.save
+  
   redirect '/'
 end
 
@@ -36,11 +40,15 @@ end
 
 # Update
 put '/:id' do  
-  item = Item.get params[:id]  
-  item.detail = params[:detail]  
-  item.complete = params[:complete] ? 1 : 0  
-  item.updated_at = Time.now  
-  item.save  
+  
+  if item = Item.get(params[:id])
+
+    item.update :detail => params[:detail], 
+      :complete => (params[:complete] ? 1 : 0),
+      :updated_at => Time.now
+    
+  end
+  
   redirect '/'  
 end  
 
@@ -53,16 +61,23 @@ end
 
 # Delete
 delete '/:id' do  
-  item = Item.get params[:id]  
-  item.destroy  
+  
+  if item = Item.get(params[:id])
+    item.destroy
+  end
+  
   redirect '/'  
 end  
 
 # Complete
-get '/:id/complete' do  
-  item = Item.get params[:id]  
-  item.complete = item.complete ? 0 : 1 
-  item.updated_at = Time.now  
-  item.save  
-  redirect '/'  
+get '/:id/complete' do
+  
+  if item = Item.get(params[:id])
+    
+    item.update :complete => (item.complete ? 0 : 1), 
+      :updated_at => Time.now
+      
+  end
+  
+  redirect '/'
 end
