@@ -2,7 +2,7 @@
 
 ## Summary
 
-* This project is to create a Sinatra To-Do List web app that includes CRUD functions.
+* This project is to create a To-Do List web app that includes CRUD functions with Sinatra framework.
 
 * The app lets you to manage your tasks and keep tracking. Functions includes:
   * Creat your tasks
